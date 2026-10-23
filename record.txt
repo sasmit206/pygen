@@ -1,0 +1,78 @@
+CREATE AND USE A PYTHON VIRTUAL ENVIRONMENT (PowerShell)
+
+1. Open the project folder:
+cd D:\IS-ENDSEM
+
+2. Create a virtual environment named .venv:
+python -m venv .venv
+
+3. Activate it:
+.\.venv\Scripts\Activate.ps1
+
+If PowerShell says running scripts is disabled, run this for the current terminal only, then activate again:
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+.\.venv\Scripts\Activate.ps1
+
+4. Install the crypto lab dependencies:
+python -m pip install --upgrade pip
+python -m pip install pycryptodome phe
+
+5. Run the generator:
+python generator.py
+
+6. Run a generated solution (replace the example folder with your output folder):
+cd D:\IS-ENDSEM\GENERATED_DOMAINS\CUSTOM_Hospital_Records
+python -m pip install -r requirements.txt
+python solution.py
+
+7. Exit the virtual environment when finished:
+deactivate
+
+NEXT TIME
+You only need to activate the existing environment; do not recreate it:
+cd D:\IS-ENDSEM
+.\.venv\Scripts\Activate.ps1
+
+WITHOUT ACTIVATING
+You can also use the virtual environment directly:
+D:\IS-ENDSEM\.venv\Scripts\python.exe D:\IS-ENDSEM\generator.py
+
+
+
+python -m venv name
+source ./name/bin/activate
+deactivate
+
+
+
+
+
+
+
+
+
+++==+++=======NEW+++++=========
+
+# 1. Navigate to the project
+cd D:\IS-ENDSEM
+
+# 2. Create and activate the virtual environment
+py -m venv .venv
+.\.venv\Scripts\Activate.ps1
+
+# 3. If PowerShell blocks activation, run:
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+.\.venv\Scripts\Activate.ps1
+
+# 4. Install dependencies
+python -m pip install --upgrade pip
+python -m pip install pycryptodome phe
+
+# 5. Run your program
+python generator.py
+
+
+
+If you create the environment successfully but activation is blocked, you can bypass activation entirely:
+.\.venv\Scripts\python.exe -m pip install pycryptodome phe
+.\.venv\Scripts\python.exe generator.py
