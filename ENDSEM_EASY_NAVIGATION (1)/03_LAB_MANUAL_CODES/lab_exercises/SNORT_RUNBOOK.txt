@@ -1,0 +1,27 @@
+LAB 8: SNORT 3 OFFLINE EXERCISE
+
+python snort_offline.py
+Choose 1 to create snort_lab/lab.pcap and local.rules.
+The capture contains three synthetic UDP packets. No traffic is transmitted.
+Only packet 2 should match sid 1000001: destination port 9999 + LAB_ALERT.
+Packet 1 is the benign control; packet 3 has the marker but a different port.
+
+With Snort 3 installed, choose 2 and supply your installation's snort.lua.
+Equivalent command (substitute the actual configuration path):
+snort -q -c /etc/snort/snort.lua -r snort_lab/lab.pcap -R snort_lab/local.rules -A alert_fast
+Configuration-only validation:
+snort -T -c /etc/snort/snort.lua -R snort_lab/local.rules
+
+Inspect the alert output for sid 1000001. Record the timestamp, source/destination,
+ports, rule identifier and message. Describe why the two controls do not match.
+Use your lab machine's installed configuration and DAQ settings. Snort 2 has
+different configuration syntax; these commands are explicitly for Snort 3.
+
+Verification status in this delivered pack: generated PCAP structure/checksums
+validated in Python. Snort executable absent in build environment, so actual
+rule loading and detection remain NOT RUN. No fabricated Snort alert log included.
+
+Official references:
+https://docs.snort.org/start/inspection
+https://docs.snort.org/start/rules
+https://docs.snort.org/start/configuration

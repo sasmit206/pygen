@@ -1,0 +1,42 @@
+START HERE — ENDSEM PRACTICE ANSWERS
+
+01_EXACT_SAMPLE_ANSWERS/
+  Grant_Expense_Portal_Answer.py  -> Grant ID, description, amount question.
+  Secure_Voting_Sample_Answer.py  -> Earlier secure-voting sample question.
+  Both are ready-to-run single Python files. Install PyCryptodome first:
+      python -m pip install pycryptodome
+
+02_PICK_A_VARIANT/
+  Choose the question type, then a story ZIP. Extract ONLY that story ZIP.
+  Grant_Style/01_grant.zip for grant/expense type questions.
+  Voting_Style/01_voting.zip for voter/server/tally type questions.
+  Other story names are in their ZIP filenames.
+  Inside the story ZIP: 01_CORE/cipher/hash/signature.py
+      Example grant: 01_CORE/aes192_cbc/md5/rsa_v15.py
+      Example voting: 01_CORE/aes256_cbc/sha512/elgamal.py
+  Each .py is standalone. 02_ALTERNATIVES/ has extra index/storage (grant)
+  or transport/homomorphic/threshold/search (voting) choices.
+
+EDIT A CODE FOR YOUR PAPER
+  Search for QUICK EDIT MAP at the top of your chosen .py. Comments beside
+  Zones 1, 2, 4, and 5 point to wording, accounts, limits, and menus.
+  Change story labels and example inputs there. Pick a matching cipher/hash/
+  signature filename when the algorithm changes. For extra stored fields or
+  different data types, also update the Zone 5 record and verification logic.
+  Save your edited .py under a new name so it uses a fresh state folder.
+
+03_LAB_MANUAL_CODES/
+  Open lab_exercises/ for runnable topic codes; short_primitives/ for small demos.
+  There is no need to open these for a complete grant or voting sample answer.
+
+04_OPTIONAL_GENERATORS_AND_TESTS.zip
+  Builders, templates, coverage, manifests, and test code for creating further
+  combinations or inspecting how the pack was verified. Most exam practice
+  needs only folders 01 and 02. Extract this optional ZIP and run build_all.py
+  inside ENDSEM_MANUAL_PACK if you want to regenerate all source variants.
+
+COUNTS: 6,993 voting-style + 5,224 structured-record = 12,217 complete
+standalone variants. These are zipped by story to keep the download small.
+The exact grant sample tested G001=500 and G002=700, with decrypted total 1200.
+Legacy algorithms are syllabus practice. The tool/source archive documents
+limits for CDD, FHE, GnuPG, Snort, and role isolation.
